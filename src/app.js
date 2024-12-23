@@ -2,8 +2,14 @@ import express from 'express'
 import database from './app/models/database.js'
 import { initModel } from './app/models/init.model.js'
 
+import routesProductos from './app/routes/productos.routes.js'
 
 const app = express()
+
+app.use(express.json()) 
+
+
+app.use('/api/productos',routesProductos )
 
 
 const initDB = async () => {
@@ -23,7 +29,6 @@ const initDB = async () => {
 
 initDB()
 
-app.use(express.json()) 
 
 
 export default app

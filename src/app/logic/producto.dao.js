@@ -1,4 +1,4 @@
-import { Producto } from "../models/producto.model"
+import { Producto } from "../models/producto.model.js"
 
 export class DaoProducto {
 
