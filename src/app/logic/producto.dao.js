@@ -17,7 +17,17 @@ class DaoProducto {
 
     async getProductById(id){
 
-        return await Producto.findOne({where: {: id}})
+        return await Producto.findOne({where: {id_producto: id}})
+    }
+
+    async updateProduct(producto, id){
+
+        return await Producto.update(producto, {where: {id_producto: id}})
+    }
+
+    async deleteProduct(id){
+        
+        return await Producto.destroy({where: {id_producto: id}})
     }
 
 }
