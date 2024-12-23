@@ -1,6 +1,6 @@
 import { Producto } from "../models/producto.model"
 
-class DaoProducto {
+export class DaoProducto {
 
     constructor (){}
 
@@ -32,5 +32,3 @@ class DaoProducto {
 
 }
 
-
-export default DaoProducto
